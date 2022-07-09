@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #000;
+}
+header{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 100;
+}
+header .logo{
+    width: 150px;
+}
+header >ul{
+    display: flex;
+    list-style: none;
+    margin: 0px 10px;
+}
+header >ul >li{
+    margin: 0px 15px
+}
+header >ul >li >a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+header >ul >li:hover a{
+    color: #de0611;
+    text-decoration: none;
+}
+header .search {
+    position: relative;
+    height: 40px;
+    width: 300px;
+}
+header .search input{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    border-radius: 4px;
+    padding: 0px 10px 0px 45px;
+}
+.search input::placeholder{
+    color: #fff;
+}
+.search .fa-search{
+    position: absolute;
+    line-height: 40px;
+    left: 10px;
+    color: #fff;
+    padding-right: 10px;
+}
+.baner{
+    position: relative;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50%;
+}
+.baner .content{
+    position: absolute;
+    max-width: 43%;
+    top: 30%;
+    left: 100px;
+}
+.baner .content .movieTitle{
+    max-width: 250px;
+}
+.baner .content >h4>span{
+    color: rgba(255, 255, 255, .5);
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 10px;
+    border-right: 1px solid rgba(255, 255, 255, .5);
+    letter-spacing: 2px;
+}
+.baner .content >h4>span:last-child{
+    border-radius: none;
+}
+.baner .content >h4>span:first-child{
+    border-radius: none;
+}
+.baner .content >h4>span i {
+    font-style: normal;
+    background-color: #de0611;
+    display: inline-block;
+    color: white;
+    padding: 0px 8px;
+    border-radius: 4px;
+}
+.baner .content p{
+    color: white;
+    margin: 10px 0px 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 1em;
+}
+.baner .content .buttons{
+    position: relative;
+}
+.baner .content .buttons a{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #de0611;
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+.baner .content .buttons i{
+    margin-right: 10px;
+}
+.baner .content .buttons a:nth-child(2){
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.baner .content .buttons a:nth-child(2):hover{
+    background-color: #de0611;
+    transition: all 0.5s;
+}
+.play{
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+.play:hover{
+    text-decoration: none;
+    opacity: 1;
+    color: white;
+}
+.play img{
+    width: 40px;
+    margin-right: 15px;
+}
+
+/* add */
+.total-items {
+    padding-left: -5px;
+    padding-right: -5px;
+}
+
+.item-product {
+    float: left; 
+    padding: 5px 5px 5px 5px; 
+    width: 20%;
+    border-radius: 5px;
+    background-color: #fff;
+    background-clip: content-box;
+    transition: all 0.2s linear;
+}
+
+.item-product:hover {
+    box-shadow: 0 0.0625rem 20px 0 rgb(0 0 0 / 5%);
+    transform: translateY(-.0625rem);
+    z-index: 1;
+    background-color: rgba(76, 175, 80, 0.2);
+}
+.item-image {
+    width: 100%;
+}
+
+.name-item {
+    text-align: center; 
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    color: #054f9f;
+}
+
+.price-item {
+    text-align: center; 
+    color: #ee4d2d;
+}

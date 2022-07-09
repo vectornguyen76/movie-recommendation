@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- css style -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="{{url_for('static', filename='img/logo.png')}}" alt="NetFlix"></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+        <form action="/" method="post" class="search">
+            <input type="text" placeholder="Search" name="input_search" id="input_search">
+            <i class="fas fa-search"></i>
+        </form>
+    </header>
+    <div class="baner">
+        <div class="content">
+            <img src="{{url_for('static', filename='img/name.png')}}" alt="Mulan" class="movieTitle">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Actinon</span>
+            </h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quibusdam fugit tenetur nisi ad quaerat, numquam provident consectetur delectus. Suscipit sapiente molestias excepturi voluptas? Nesciunt iure tenetur nam sed ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quam odit soluta? Vel consequuntur ab expedita cum nisi autem sit, ex corrupti! Illum perspiciatis molestias ipsam a accusamus aut? Rerum?
+            </p>
+            <div class="buttons">
+                <a href="#"><i class="fas fa-play"></i>Play</a>
+                <a href="#"><i class="fas fa-plus"></i>My List</a>
+            </div>
+        </div>
+        <a href="#" class="play"><img src="{{url_for('static', filename='img/play.png')}}" alt="Mulan">Watch Trailer</a>
+    </div>
+
+    <div class="container">
+        <div id="parent">
+            <div class="total-items" id="0">
+                {% for movie in movies %}
+                <a href="hihi" target="_blank">
+                    <div class="item-product">
+                        <img class="item-image" alt="None" src="http://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" />
+                        <div class="name-item">{{movie.title}}</div>
+                        <div class="price-item">{{movie.vote_average}}</div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
