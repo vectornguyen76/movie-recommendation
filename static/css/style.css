@@ -207,6 +207,7 @@ header .search input{
 }
 .item-image {
     width: 100%;
+    height: 40vh;
 }
 
 .name-item {
