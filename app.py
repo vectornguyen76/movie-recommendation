@@ -1,21 +1,11 @@
 from flask import Flask, render_template, request
 import urllib.request, json
+import urllib.parse
 import os
 
 app = Flask(__name__)
 
 api_key = "8e4f40d4f020b0f1e3ae3b35dbe2a179"
-
-import urllib.parse
-
-# String
-query = 'con khi'
-
-# Convert String To URL
-url = urllib.parse.quote_plus(query)
-
-# Print
-print(url)
 
 # Chạy model để vectorization ... => lưu file .npz
 
@@ -39,7 +29,6 @@ def index():
         response = urllib.request.urlopen(url)
         data = response.read()
         dict = json.loads(data)
-        # print(dict)
         check_results = dict["results"]
         results = []
         
