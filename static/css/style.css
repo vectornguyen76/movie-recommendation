@@ -193,8 +193,8 @@ header .search input{
     float: left; 
     padding: 5px 5px 5px 5px; 
     width: 20%;
-    border-radius: 5px;
-    background-color: #fff;
+    border-radius: 7px;
+    background-color: rgba(2, 21, 26, 0.2);
     background-clip: content-box;
     transition: all 0.2s linear;
 }
@@ -203,11 +203,12 @@ header .search input{
     box-shadow: 0 0.0625rem 20px 0 rgb(0 0 0 / 5%);
     transform: translateY(-.0625rem);
     z-index: 1;
-    background-color: rgba(76, 175, 80, 0.2);
+    background-color: rgba(9, 65, 138, 0.2);
 }
 .item-image {
     width: 100%;
     height: 40vh;
+    border-radius: 7px;
 }
 
 .name-item {
@@ -217,7 +218,9 @@ header .search input{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
-    color: #054f9f;
+    color: #fff;
+    font-weight: 700;
+    padding-bottom: 4px;
 }
 
 .price-item {
