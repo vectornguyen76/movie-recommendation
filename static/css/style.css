@@ -70,22 +70,39 @@ header .search input{
     padding-right: 10px;
 }
 .baner{
-    position: relative;
-    background-image: url('../img/bg.jpg');
+    /* position: relative;
+    background: linear-gradient(77deg,rgba(0,0,0,.6),transparent 85%);
+    background-image: url('https://image.tmdb.org/t/p/original//ocUp7DJBIc8VJgLEw1prcyK1dYv.jpg'), linear-gradient(77deg,rgba(0,0,0,.6),transparent 85%);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 50%;
+    padding-top: 50%; */
+    
+    background-image: url('https://image.tmdb.org/t/p/original//ocUp7DJBIc8VJgLEw1prcyK1dYv.jpg');
+    background-position: 50%;
+    background-size: cover;
+    bottom: 0;
+    color: #fff;
+    height: 100vh;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
 }
-.baner .content{
+
+.content{
     position: absolute;
     max-width: 43%;
     top: 30%;
     left: 100px;
 }
-.baner .content .movieTitle{
+.content .movieTitle{
     max-width: 250px;
 }
-.baner .content >h4>span{
+.content >h4>span{
     color: rgba(255, 255, 255, .5);
     font-size: 18px;
     font-weight: 500;
@@ -93,13 +110,13 @@ header .search input{
     border-right: 1px solid rgba(255, 255, 255, .5);
     letter-spacing: 2px;
 }
-.baner .content >h4>span:last-child{
+.content >h4>span:last-child{
     border-radius: none;
 }
-.baner .content >h4>span:first-child{
+.content >h4>span:first-child{
     border-radius: none;
 }
-.baner .content >h4>span i {
+.content >h4>span i {
     font-style: normal;
     background-color: #de0611;
     display: inline-block;
@@ -107,17 +124,18 @@ header .search input{
     padding: 0px 8px;
     border-radius: 4px;
 }
-.baner .content p{
+.content p{
     color: white;
     margin: 10px 0px 20px;
-    font-weight: 300;
-    line-height: 1.5;
+    font-weight: 400;
+    line-height: 1.8;
     font-size: 1em;
+    width: 70%;
 }
-.baner .content .buttons{
+.content .buttons{
     position: relative;
 }
-.baner .content .buttons a{
+.content .buttons a{
     position: relative;
     display: inline-block;
     margin-right: 10px;
@@ -130,14 +148,14 @@ header .search input{
     text-transform: uppercase;
     border-radius: 4px;
 }
-.baner .content .buttons i{
+.content .buttons i{
     margin-right: 10px;
 }
-.baner .content .buttons a:nth-child(2){
+.content .buttons a:nth-child(2){
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.baner .content .buttons a:nth-child(2):hover{
+.content .buttons a:nth-child(2):hover{
     background-color: #de0611;
     transition: all 0.5s;
 }
@@ -204,4 +222,25 @@ header .search input{
 .price-item {
     text-align: center; 
     color: #ee4d2d;
+}
+
+.baner_title {
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+    color: #fff;
+    font-size: 2vw;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    /* -moz-osx-font-smoothing: grayscale; */
+    font-family: Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.baner_left {
+    background: linear-gradient(77deg,rgba(0,0,0,.6),transparent 85%);
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 26.09%;
+    top: 0;
+    transition: opacity .5s;
 }

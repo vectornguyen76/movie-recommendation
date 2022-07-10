@@ -34,7 +34,7 @@ def index():
         
         for result in check_results:
             try:
-                if (result['backdrop_path'] != None) and (result['title'] != None):
+                if (result['poster_path'] != None) and (result['title'] != None):
                     results.append(result)
             except:
                 continue

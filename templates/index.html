@@ -17,6 +17,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- css style -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/responsive.css')}}">
+
 </head>
 
 <body>
@@ -35,40 +37,39 @@
         </form>
     </header>
     <div class="baner">
-        <div class="content">
-            <img src="{{url_for('static', filename='img/name.png')}}" alt="Mulan" class="movieTitle">
-            <h4>
-                <span>2020</span>
-                <span><i>12+</i></span>
-                <span>1h 55min</span>
-                <span>Actinon</span>
-            </h4>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quibusdam fugit tenetur nisi ad quaerat, numquam provident consectetur delectus. Suscipit sapiente molestias excepturi voluptas? Nesciunt iure tenetur nam sed ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quam odit soluta? Vel consequuntur ab expedita cum nisi autem sit, ex corrupti! Illum perspiciatis molestias ipsam a accusamus aut? Rerum?
-            </p>
-            <div class="buttons">
-                <a href="#"><i class="fas fa-play"></i>Play</a>
-                <a href="#"><i class="fas fa-plus"></i>My List</a>
-            </div>
-        </div>
-        <a href="#" class="play"><img src="{{url_for('static', filename='img/play.png')}}" alt="Mulan">Watch Trailer</a>
     </div>
+    <div class="baner_left"></div>
+    <div class="content">
+        <h1 class="baner_title">Spider-Man: No Way Home</h1>
+        <!-- <img src="{{url_for('static', filename='img/name.png')}}" alt="Mulan" class="movieTitle"> -->
+        <h4>
+            <span>2020</span>
+            <span><i>12+</i></span>
+            <span>1h 55min</span>
+            <span>Actinon</span>
+        </h4>
+        <p class="baner_content" >
+            Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.
+        </p>
+        <div class="buttons">
+            <a href="#"><i class="fas fa-play"></i>Play</a>
+            <a href="#"><i class="fas fa-plus"></i>My List</a>
+        </div>
+    </div>
+    <a href="#" class="play"><img src="{{url_for('static', filename='img/play.png')}}" alt="Mulan">Watch Trailer</a>
 
     <div class="container">
-        <div id="parent">
             <div class="total-items" id="0">
                 {% for movie in movies %}
                 <a href="hihi" target="_blank">
                     <div class="item-product">
-                        <img class="item-image" alt="None" src="http://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" />
+                        <img class="item-image" alt="None" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" />
                         <div class="name-item">{{movie.title}}</div>
                         <div class="price-item">{{movie.vote_average}}</div>
                     </div>
                 </a>
                 {% endfor %}
             </div>
-            
-        </div>
     </div>
     
     <!-- Optional JavaScript -->
