@@ -225,8 +225,20 @@ header .search input{
 
 .price-item {
     text-align: center; 
-    color: #ee4d2d;
+    color: #fff;
+    height: 100px;
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden; */
 }
+
+/* .price-item :hover{
+    text-align: center; 
+    color: #fff;
+    height: 100px;
+    display: block;
+} */
 
 .baner_title {
     text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);

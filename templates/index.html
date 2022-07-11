@@ -36,8 +36,10 @@
             <i class="fas fa-search"></i>
         </form>
     </header>
-    <div class="baner">
+    {% if movies %}
+    <div class="baner" style="background-image: url('http://image.tmdb.org/t/p/w500{{movies[0].backdrop_path}}')">
     </div>
+    {% endif %}
     <div class="baner_left"></div>
     <div class="content">
         <h1 class="baner_title">Spider-Man: No Way Home</h1>
@@ -58,7 +60,7 @@
     </div>
     <a href="#" class="play"><img src="{{url_for('static', filename='img/play.png')}}" alt="Mulan">Watch Trailer</a>
 
-    <div class="container">
+    <!-- <div class="container">
             <div class="total-items" id="0">
                 {% for movie in movies %}
                 <a href="hihi" target="_blank">
@@ -68,6 +70,22 @@
                         <div class="price-item">{{movie.vote_average}}</div>
                     </div>
                 </a>
+                {% endfor %}
+            </div>
+    </div>
+    <br>
+    <h1>Recommend</h1>
+    <br> -->
+    <div class="container">
+            <div class="total-items" id="2" >
+                {% for movie in movies2 %}
+                <!-- <a href="a" target="_blank"> -->
+                    <div class="item-product">
+                        <img class="item-image" alt="None" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" />
+                        <div class="name-item">{{movie.title}}</div>
+                        <div class="price-item">{{movie.overview}}</div>
+                    </div>
+                <!-- </a> -->
                 {% endfor %}
             </div>
     </div>
