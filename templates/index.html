@@ -36,14 +36,24 @@
             <i class="fas fa-search"></i>
         </form>
     </header>
-    {% if movies %}
-    <div class="baner" style="background-image: url('http://image.tmdb.org/t/p/w500{{movies[0].backdrop_path}}')">
-    </div>
+    {% if movie %}
+    <div class="baner" style="background-image: url('http://image.tmdb.org/t/p/w500{{movie.backdrop_path}}')"></div>
+    {% else %}
+    <div class="baner"></div>
     {% endif %}
     <div class="baner_left"></div>
     <div class="content">
+        {% if movie %}
+        <h1 class="baner_title">{{movie.title}}</h1>
+        <h4>
+            <span>2020</span>
+            <span><i>12+</i></span>
+            <span>1h 55min</span>
+            <span>Actinon</span>
+        </h4>
+        <p class="baner_content">{{movie.overview}}</p>
+        {% else %}
         <h1 class="baner_title">Spider-Man: No Way Home</h1>
-        <!-- <img src="{{url_for('static', filename='img/name.png')}}" alt="Mulan" class="movieTitle"> -->
         <h4>
             <span>2020</span>
             <span><i>12+</i></span>
@@ -53,6 +63,9 @@
         <p class="baner_content" >
             Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.
         </p>
+
+        {% endif %}
+
         <div class="buttons">
             <a href="#"><i class="fas fa-play"></i>Play</a>
             <a href="#"><i class="fas fa-plus"></i>My List</a>
@@ -77,18 +90,55 @@
     <h1>Recommend</h1>
     <br> -->
     <div class="container">
-            <div class="total-items" id="2" >
-                {% for movie in movies2 %}
-                <!-- <a href="a" target="_blank"> -->
-                    <div class="item-product">
-                        <img class="item-image" alt="None" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" />
-                        <div class="name-item">{{movie.title}}</div>
-                        <div class="price-item">{{movie.overview}}</div>
-                    </div>
-                <!-- </a> -->
-                {% endfor %}
-            </div>
+        {% if movie %}
+        <div >
+            <h2 class="name_section">Recommend by TFIDF</h2>
+        </div>
+        {% endif %}
+
+        <div class="total-items">
+            {% for movie in tfidf %}
+                <div class="item-product">
+                    <img class="item-image" alt="None" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" />
+                    <div class="name-item">{{movie.title}}</div>
+                    <div class="price-item">{{movie.overview}}</div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if movie %}
+        <div >
+            <h2 class="name_section">Recommend by LSTM</h2>
+        </div>
+        {% endif %}
+
+        <div class="total-items">
+            {% for movie in hidden_state %}
+                <div class="item-product">
+                    <img class="item-image" alt="None" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" />
+                    <div class="name-item">{{movie.title}}</div>
+                    <div class="price-item">{{movie.overview}}</div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if movie %}
+        <div >
+            <h2 class="name_section">Recommend</h2>
+        </div>
+        {% endif %}
+
+        <div class="total-items">
+            {% for movie in all_sim %}
+                <div class="item-product">
+                    <img class="item-image" alt="None" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" />
+                    <div class="name-item">{{movie.title}}</div>
+                    <div class="price-item">{{movie.overview}}</div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
+
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

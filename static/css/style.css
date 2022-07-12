@@ -224,13 +224,19 @@ header .search input{
 }
 
 .price-item {
-    text-align: center; 
+    text-align: left; 
     color: #fff;
     height: 100px;
-    /* display: -webkit-box;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
-    overflow: hidden; */
+    overflow: hidden;
+}
+.name_section {
+    color: #fff;
+    font-weight: 700;
+    padding-bottom: 10px;
+    padding-top: 20px;
 }
 
 /* .price-item :hover{
